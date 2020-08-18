@@ -1,0 +1,7 @@
+# Forward button (button 9) is PgUP
+"xvkbd -text '\[Prior]'" # Sends PgUp
+  b:9
+
+# Backward button (button 8) is END
+"xvkbd -text '\[End]'" # Sends END
+  b:8
