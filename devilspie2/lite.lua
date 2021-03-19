@@ -1,0 +1,4 @@
+--if (get_window_name()=="unsaved* - lite") then
+ --  set_window_geometry(400,0,1150,1200);
+ --  maximize_vertically();
+--end
