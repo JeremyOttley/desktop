@@ -1,7 +1,17 @@
-Xft.dpi:	109
+Xft.dpi:	210
 Xft.antialias: 	true
 Xft.rgba:	rgb
 Xft.hinting:	true
 Xft.hintstyle:	hintslight
 Xft.autohint:	false
 Xft.lcdfilter:	lcddefault
+
+urxvt*scrollBar: false
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
+urxvt*foreground:       #aaaaaa
+urxvt*transparent: true
+urxvt*shading: 23
+urxvt*font: xft:DejaVu Sans Mono:pixelsize=15:Regular
+urxvt*blurRadius: 5
+urxvt*fading: 30
