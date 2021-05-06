@@ -1,11 +1,11 @@
 # Set default search option to youtube
 --default-search "youtube1:"
 --yes-playlist
---output "${HOME}/Downloads/Youtube/%(title)s-%(resolution)s.%(ext)s"
+--output "${HOME}/Videos/%(title)s-%(resolution)s.%(ext)s"
 --no-overwrites
---write-info-json
---audio-format "flac"
---audio-quality 0
+#--write-info-json
+#--audio-format "flac"
+#--audio-quality 0
 #
 --buffer-size 1024
 --continue
@@ -15,7 +15,9 @@
 --no-check-certificate
 #--no-playlist
 --prefer-ffmpeg
---prefer-free-formats
+#--prefer-free-formats
+--merge-output-format mp4
+--format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best"
 --restrict-filenames
 --retries 3
 --skip-unavailable-fragments
