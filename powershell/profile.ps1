@@ -10,8 +10,8 @@ function twitch {
 function mpv {
 	[CmdletBinding()]
 	param(
-		[Parameter()]
-		[string] $Source
+	  [Parameter()]
+	  [string] $Source
 	)
 	C:\Users\jottley\Downloads\mpv.exe $Source
 }
