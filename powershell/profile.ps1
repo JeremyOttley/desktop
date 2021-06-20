@@ -15,3 +15,12 @@ function mpv {
 	)
 	C:\Users\jottley\Downloads\mpv.exe $Source
 }
+
+function yt2mp3 {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $URL
+	)
+	youtube-dl --ignore-errors --output %(title)s.%(ext)s" --extract-audio --audio-format mp3 $URL
+}
