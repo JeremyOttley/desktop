@@ -29,7 +29,7 @@ function tarkov {
 	[CmdletBinding()]
 	param(
 	  [Parameter()]
-	  [string] $URL
+	  [string] $Channel
 	)
 	twitch lvndmark
 }
