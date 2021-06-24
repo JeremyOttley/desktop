@@ -22,7 +22,7 @@ function yt2mp3 {
 	  [Parameter()]
 	  [string] $URL
 	)
-	youtube-dl --ignore-errors --output %(title)s.%(ext)s" --extract-audio --audio-format mp3 $URL
+	youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3 $URL
 }
 
 function tarkov {
