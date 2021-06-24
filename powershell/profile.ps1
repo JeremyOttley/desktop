@@ -24,3 +24,12 @@ function yt2mp3 {
 	)
 	youtube-dl --ignore-errors --output %(title)s.%(ext)s" --extract-audio --audio-format mp3 $URL
 }
+
+function tarkov {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $URL
+	)
+	twitch lvndmark
+}
