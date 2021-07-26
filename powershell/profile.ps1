@@ -33,3 +33,12 @@ function tarkov {
 	)
 	twitch lvndmark
 }
+
+function instastory {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $Username
+	)
+	python pyinstastories.py -d $Username --no-thumbs
+}
