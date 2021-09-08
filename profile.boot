@@ -1,4 +1,4 @@
-(set-env! :dependencies '[[org.clojure/clojure   "1.10.2"]
+(set-env! :dependencies '[
 			  [me.raynes/fs "1.4.6"]
 			  [clj-http "3.12.3"]
 [cljfx "1.7.14"]
