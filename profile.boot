@@ -1,8 +1,8 @@
 (set-env! :dependencies '[
 			  [me.raynes/fs "1.4.6"]
 			  [clj-http "3.12.3"]
-[cljfx "1.7.14"]
-        [cheshire "5.10.1"]])
+			  [cheshire "5.10.1"]
+			  [cljfx "1.7.14"]])
           ;;:source-paths #{"src/"})
 
 (require '[me.raynes.fs :as fs])
@@ -18,6 +18,7 @@
 (require '[clojure.spec.alpha :as spec])
 (require '[clojure.walk :as walk])
 (require '[cljfx.api :as fx])
+(require '[clojure.java.shell :refer [sh]])
 
 ;;;;;;;;;;;
 ;; TASKS ;;
@@ -58,6 +59,9 @@
     (-> json
         :body
         prn-str)))
+
+(defn bash [command]
+  (sh "bash" "-c" command))
 
 
 (defn pretty-print [text]
