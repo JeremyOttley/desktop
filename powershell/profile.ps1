@@ -26,11 +26,6 @@ function yt2mp3 {
 }
 
 function tarkov {
-	[CmdletBinding()]
-	param(
-	  [Parameter()]
-	  [string] $Channel
-	)
 	twitch lvndmark
 }
 
