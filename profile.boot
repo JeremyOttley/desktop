@@ -78,41 +78,49 @@
 ;; FILE I/O
  
 (use 'clojure.java.io)
+
+(defn catchError [event]
+  (try
+    event
+    (catch Exception e (println "Error : " (.getMessage e)))))
  
 (defn write-to-file
   [file text]
- 
-  ;; with-open opens and closes the file
-  ;; and then writes a string to a file
   (with-open [wrtr (writer file)]
     (.write wrtr text)))
  
 (defn read-from-file
   [file]
+  (catchError (println (slurp file))))
  
-  ;; We can catch a potential file not found error
-  ;; with exception handling
- 
-  (try
-    ;; Read from a file to a single string
-    (println (slurp file))
- 
-    ;; Catch the error and print it
-    (catch Exception e (println "Error : " (.getMessage e)))))
- 
-;; Append text to a file
+
+
 (defn append-to-file
   [file text]
- 
   (with-open [wrtr (writer file :append true)]
     (.write wrtr text)))
  
 ;; Read 1 line at a time
 (defn read-line-from-file
   [file]
- 
   (with-open [rdr (reader file)]
     (doseq [line (line-seq rdr)]
       (println line))))
 
-(def json-api-endpoint "https://jsonplaceholder.typicode.com/photos")
+(def json-api-endpoint 
+  "https://jsonplaceholder.typicode.com/photos")
+
+(defn twitch [channel]
+  (sh "streamlink" (str "https://www.twitch.tv/" channel) "best"))
+
+(defn mpv [input]
+  (let [view "C:\\Users\\jottley\\Downloads\\mpv.exe"]
+    (sh view input)))
+
+(defn tarkov [channel]
+  (twitch "lvndmark"))
+
+(def *features* {
+  :name (System/getProperty "os.name"),
+  :version (System/getProperty "os.version"),
+  :arch (System/getProperty "os.arch")})
