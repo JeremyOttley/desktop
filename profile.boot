@@ -66,3 +66,8 @@
 
 (defn pretty-print [text]
   (clojure.pprint/pprint text))
+
+(def *features* {
+  :name (System/getProperty "os.name"),
+  :version (System/getProperty "os.version"),
+  :arch (System/getProperty "os.arch")})
