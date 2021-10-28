@@ -123,6 +123,15 @@ function nimr {
 	nim c -r $program
 }
 
+function nimrelease {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $program
+	)
+	nim c -d:release $program
+}
+
 function extract-all {
 	[CmdletBinding()]
 	$files = Get-Childitem $pwd -Recurse -Include *.zip
