@@ -1,0 +1,80 @@
+*VT100.allowWindowOps : true
+*VT100.allowTitleOps  : true
+*VT100.allowFontOps   : true
+
+*customization: -color
+
+! xterm settings ---------------------------------------------------------------
+! https://wiki.archlinux.org/index.php/Xterm
+
+XTerm*termName: xterm-256color
+XTerm*VT100.geometry: 80x32
+
+XTerm*saveLines:        500
+XTerm*scrollBar:        false
+XTerm*cursorColor:      white
+XTerm*pointerColor:     white
+XTerm*c132:             true
+XTerm*loginShell:       false
+XTerm*Foreground:       white
+XTerm*Background:       black
+
+! A better blue for black background
+XTerm.VT100.color3: rgb:f3/dc/55
+XTerm.VT100.color11: rgb:f3/dc/55
+XTerm.VT100.color4: cornflowerblue
+
+XTerm*faceName: Iosevka
+XTerm.italicFont: xft:Iosevka:italic:autohint=true
+
+XTerm*faceSize: 13
+XTerm*xftAntialias: true
+XTerm*cjkWidth: false
+
+XTerm*locale: true
+xterm.utf8: true
+XTerm*utf8Title: true
+
+XTerm*bellIsUrgent: true
+XTerm*borderWidth: 0
+
+! The default Alt key behavior on xterm is a modifier to send eight bit input
+! characters so that user can insert æ by pressing Alt+f inside xterm.  This
+! behavior is different from terminal emulators such as gnome-terminal and
+! konsole, which uses Alt as modifier to sends ^[ (escape} character.  If you want
+! Alt key on xterm to behave as on other terminal emulators, i.e. sends ^[ instead
+! of acts as eight bit modifier, you will need to put one of the following line in
+! your resource file.
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+
+! Copy selections to Clipboard instead of to Primary
+XTerm*selectToClipboard: true
+
+! ! emacs settings ---------------------------------------------------------------
+! ! https://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html
+! emacs.font: Iosevka
+! emacs*geometry: 80x32
+! emacs.toolBar: false
+! emacs.verticalScrollBars: false
+
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+XLock.mode: random
+XLock.echokeys: true
+XLock.enablesaver: true
+XLock.usefirst: true
+XLock.allowroot: true
+
+Scrollbar.JumpCursor:   True
+
+AcroRead.Geometry: 800x900-0+0
+AcroRead.DefaultSplitterPos: 237
+
+cdsLibManager*textFontList:-adobe-courier-medium-r-*-*-12-*-*-*-*-*-*-*
