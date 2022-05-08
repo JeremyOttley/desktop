@@ -155,3 +155,12 @@ function cljs {
 function socket {
   clojure -M:repl/socket
 }
+
+function say {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $Text
+	)
+	Add-Type –AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak($Text)
+}
