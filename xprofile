@@ -1,1 +1,6 @@
+export PAGER=less
+export MANWIDTH=80
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+export VISUAL="emacsclient -c -a emacs"
+export DUNST_SIZE='250x20-30+30'
 xrandr --output HDMI-0 --rotate right
