@@ -57,6 +57,7 @@ XTerm*selectToClipboard: true
 ! emacs*geometry: 80x32
 ! emacs.toolBar: false
 ! emacs.verticalScrollBars: false
+! emacs.fullscreen: maximized
 
 ! Xft settings ---------------------------------------------------------------
 
