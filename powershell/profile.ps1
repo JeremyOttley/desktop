@@ -164,3 +164,12 @@ function say {
 	)
 	Add-Type –AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak($Text)
 }
+
+function benchmark {
+	[CmdletBinding()]
+	param(
+	  [Parameter()]
+	  [string] $command
+	)
+	Measure-Command { $command | Out-Default }
+}
