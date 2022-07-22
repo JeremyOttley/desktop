@@ -173,3 +173,7 @@ function benchmark {
 	)
 	Measure-Command { $command | Out-Default }
 }
+
+function dotPublish {
+  dotnet publish -c Release -r win10-x64 --self-contained
+}
